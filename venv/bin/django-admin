@@ -1,4 +1,4 @@
-#!/home/desenvolvimento/Documentos/Work/hotel-mota/venv/bin/python
+#!/home/desenvolvimento/Documentos/Work/gerencia-hotel/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

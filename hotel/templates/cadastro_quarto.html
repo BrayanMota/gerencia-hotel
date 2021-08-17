@@ -7,4 +7,8 @@
 {% block content %}
 <h1>Cadastrar Quarto</h1>
 <p>Informe os dados para o cadastro do quarto</p>
+<form method="POST"> {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Salvar" />
+</form>
 {% endblock %}
