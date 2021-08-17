@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Lista Quartos</title>
+{% endblock %}
+
+{% block content %}
+<h1>Lista de Quartos</h1>
+{% for quarto in quartos %}
+<h2>Número: {{ quarto.numero }}</h2>
+<p>Quarto: {{ quarto.nome }}</p>
+<p>Preço: {{ quarto.preco}}</p>
+{% endfor %}
+{% endblock %}
