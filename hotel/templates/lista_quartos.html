@@ -7,7 +7,7 @@
 {% block content %}
 <h1>Lista de Quartos</h1>
 {% for quarto in quartos %}
-<h2>Número: {{ quarto.numero }}</h2>
+<h2>Número: <a href="{% url 'detalhes_quarto' quarto_id=quarto.quarto_id %}"> {{ quarto.numero }} </a></h2>
 <p>Quarto: {{ quarto.nome }}</p>
 <p>Preço: {{ quarto.preco}}</p>
 {% endfor %}

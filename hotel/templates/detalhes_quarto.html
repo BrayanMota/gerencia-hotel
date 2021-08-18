@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Editar Quarto</title>
+{% endblock %}
+
+{% block content %}
+<h1>Quarto número {{ quarto.numero }}</h1>
+<p>Quarto: {{ quarto.nome }}</p>
+<p>Preço: {{ quarto.preco}}</p>
+<input type="submit" value="Editar">
+<a href="{% url 'edita_quarto' quarto_id=quarto.quarto_id %}"></a>
+</input>
+{% endblock %}
