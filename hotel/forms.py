@@ -1,5 +1,5 @@
 from django import forms
-from .models import Quarto
+from hotel.models import Quarto
 
 class QuartoForm(forms.ModelForm):
   class Meta:

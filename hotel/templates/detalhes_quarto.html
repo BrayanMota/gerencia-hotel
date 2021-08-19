@@ -8,7 +8,7 @@
 <h1>Quarto número {{ quarto.numero }}</h1>
 <p>Quarto: {{ quarto.nome }}</p>
 <p>Preço: {{ quarto.preco}}</p>
-<input type="submit" value="Editar">
-<a href="{% url 'edita_quarto' quarto_id=quarto.quarto_id %}"></a>
-</input>
+<a href="{% url 'edita_quarto' quarto_id=quarto.quarto_id %}">
+<input type="button" value="Editar"/>
+</a>
 {% endblock %}

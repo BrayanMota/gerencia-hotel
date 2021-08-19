@@ -1,7 +1,14 @@
 {% extends 'base.html' %}
 
+{% block title %}
+  <title>Editor de Quartos</title>
+{% endblock %}
+
 {% block content %}
-  <form method="POST"> {% csrf_token %}
-    {{ form_as_p }}
-  </form>
+<h1>Editar Quarto</h1>
+<p>Altere os dados</p>
+<form method="POST"> {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Salvar" />
+</form>
 {% endblock %}
