@@ -33,6 +33,7 @@ def detalhes_quarto(request, quarto_id):
   quarto = get_object_or_404(Quarto, pk=quarto_id)
   return render(request, 'detalhes_quarto.html', {'quarto': quarto})
 
-# def exclui_quarto(request, quarto_id):
-#   quarto = get_object_or_404(Quarto, pk=quarto_id)
-#   return render(request, 'edita_quarto.html', {'quarto': quarto})
+def exclui_quarto(request, quarto_id):
+  quarto = get_object_or_404(Quarto, pk=quarto_id)
+  quarto.delete()
+  return redirect('lista_quartos')

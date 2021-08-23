@@ -7,4 +7,5 @@ urlpatterns = [
     path('cadastra/', views.cadastra_quarto, name='cadastra_quarto'),
     path('detalhes/<int:quarto_id>/', views.detalhes_quarto, name='detalhes_quarto'),
     path('edita/<int:quarto_id>/', views.edita_quarto, name='edita_quarto'),
+    path('exclui/<int:quarto_id>/', views.exclui_quarto, name='exclui_quarto'),
 ]
