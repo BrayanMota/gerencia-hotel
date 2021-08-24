@@ -5,3 +5,6 @@ class QuartoForm(forms.ModelForm):
   class Meta:
     model = Quarto
     fields = ('numero', 'nome', 'preco', 'camas', 'frigobar')
+    # widgets = {
+    #   'disponibilidade': forms.Select(choices=Disponibilidade.ESCOLHAS)
+    # }
