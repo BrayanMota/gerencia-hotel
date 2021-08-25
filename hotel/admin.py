@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Quarto
+from .models import Quarto, Reserva
 
 # Register your models here.
 class QuartoAdmin(admin.ModelAdmin):
@@ -14,3 +14,4 @@ class QuartoAdmin(admin.ModelAdmin):
   # )
 
 admin.site.register(Quarto, QuartoAdmin)
+admin.site.register(Reserva)

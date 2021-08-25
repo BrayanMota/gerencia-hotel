@@ -1,6 +1,7 @@
+from datetime import date, datetime
 from ninja import NinjaAPI, Schema, Path
-from .schemas import QuartoSchema
-from .models import Quarto
+from .schemas import QuartoSchema, ReservaSchema
+from .models import Quarto, Reserva
 from django.shortcuts import get_object_or_404
 from typing import List
 
@@ -38,3 +39,9 @@ def deleta_quarto(request, quarto_id: int):
   quarto = get_object_or_404(Quarto, quarto_id=quarto_id)
   quarto.delete()
   return {'deletado': True}
+
+#API para retornar todas as reservas de um dia
+@api.get('/reservas_dia/', response=List[ReservaSchema])
+def reservas_dia(request):
+  reserva = Reserva.objects.filter(checkIn=datetime.now())
+  return reserva
