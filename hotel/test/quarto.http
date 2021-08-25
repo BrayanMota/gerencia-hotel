@@ -1,8 +1,0 @@
-#Listar todos os quartos
-POST http://127.0.0.1:8000/api/lista_quartos
-Content-Type: application/json
-
-{
-  "nome" : "VIP",
-}
-###
