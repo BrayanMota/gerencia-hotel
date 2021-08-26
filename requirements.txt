@@ -1,2 +1,11 @@
 Django~=3.2.6
+
+#Django Ninja API
+django-ninja==0.14.0
 pydantic==1.8.2
+
+#Django Rest Framework
+djangorestframework==3.12.4
+markdown==3.3.4
+django-filter==2.4.0
+
