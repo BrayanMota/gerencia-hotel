@@ -1,11 +1,7 @@
 from hotel.models import Quarto
 from hotel.forms import QuartoForm
-from hotel.serializers import QuartoSerializer
 from django.shortcuts import get_object_or_404, redirect, render
 
-from rest_framework import viewsets
-
-# Create your views here.
 def cadastra_quarto(request):
   if request.method == 'POST':
     form = QuartoForm(request.POST)
@@ -40,10 +36,3 @@ def exclui_quarto(request, quarto_id):
   quarto = get_object_or_404(Quarto, pk=quarto_id)
   quarto.delete()
   return redirect('lista_quartos')
-
-#################################################################################
-
-#REST FRAMEWORK
-class QuartoViewSet(viewsets.ModelViewSet):
-    queryset = Quarto.objects.all()
-    serializer_class = QuartoSerializer

@@ -7,10 +7,6 @@ from typing import List
 
 api = NinjaAPI()
 
-@api.get("/hello")
-def hello(request):
-    return "Hello world"
-
 @api.post('/cadastra_quarto')
 def cadastra_quarto(request, quartos: QuartoSchema):
   quarto = Quarto.objects.create(**quartos.dict())
